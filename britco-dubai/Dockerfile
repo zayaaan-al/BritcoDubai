@@ -39,6 +39,9 @@ COPY docker/nginx.conf /etc/nginx/sites-available/default
 
 # Copy entrypoint script
 COPY docker/entrypoint.sh /entrypoint.sh
+
+RUN cat -A /entrypoint.sh
+
 RUN chmod +x /entrypoint.sh
 
 EXPOSE 80
