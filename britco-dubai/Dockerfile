@@ -1,20 +1,19 @@
-FROM php:8.2-cli
+FROM php:8.2-fpm
 
+# Install minimal dependencies (skip DB drivers)
 RUN apt-get update && apt-get install -y \
-    git unzip curl libzip-dev zip nodejs npm
+    git curl unzip libzip-dev zip \
+    && docker-php-ext-install mbstring zip
 
-RUN docker-php-ext-install zip
-
+# Install Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-WORKDIR /app
+WORKDIR /var/www
 
+# Copy app files
 COPY . .
 
+# Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
-RUN npm install
-RUN npm run build
 
-EXPOSE 10000
-
-CMD php artisan serve --host=0.0.0.0 --port=$PORT
+CMD ["php-fpm"]
