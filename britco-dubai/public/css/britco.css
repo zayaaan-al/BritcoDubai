@@ -373,51 +373,207 @@ body {
 @keyframes rotateSlow { 100% { transform: rotate(360deg); } }
 
 /* =============================
-   ABOUT SECTION
+   ABOUT SECTION PREMIUM
 ============================= */
-#about { padding: 7rem 0; background: var(--section-alt); }
-.about-img-wrap { position: relative; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-dark); }
-.about-img-wrap img { width: 100%; height: 480px; object-fit: cover; }
+
+#about {
+  padding: 7rem 0;
+  background: #f8fafc;
+}
+
+/* Section Heading */
+#about .section-label {
+  color: #218ccb;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+#about .section-title {
+  color: #111827;
+  font-weight: 800;
+}
+
+#about .gradient-text {
+  background: none;
+  color: #218ccb;
+  -webkit-text-fill-color: #218ccb;
+}
+
+#about .section-subtitle {
+  color: #6b7280;
+  line-height: 1.8;
+  max-width: 650px;
+}
+
+/* Image */
+.about-img-wrap {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.about-img-wrap img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
 .about-img-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(6,14,28,0.7) 0%, transparent 60%);
+  background: linear-gradient(
+    to top,
+    rgba(33,140,203,0.12),
+    transparent
+  );
 }
+
+/* Experience Badge */
 .about-exp-badge {
   position: absolute;
-  bottom: -20px; right: -20px;
-  width: 130px; height: 130px;
-  background: var(--gradient-gold);
+  bottom: -20px;
+  right: -20px;
+
+  width: 140px;
+  height: 140px;
+
+  background: #218ccb;
   border-radius: 50%;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  box-shadow: var(--shadow-gold);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  box-shadow: 0 15px 35px rgba(33,140,203,0.25);
 }
-.about-exp-badge .num { font-size: 2.4rem; font-weight: 900; color: var(--primary); line-height: 1; }
-.about-exp-badge .lbl { font-size: 0.6rem; font-weight: 700; color: var(--primary); letter-spacing: 1.5px; text-transform: uppercase; text-align: center; }
+
+.about-exp-badge .num {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.about-exp-badge .lbl {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Content */
+#about p {
+  color: #6b7280;
+}
+
+/* Why Choose Us Heading */
+#about h4 {
+  color: #111827;
+  font-weight: 700;
+}
+
+/* Why Cards */
 .why-card {
-  padding: 1.3rem;
-  display: flex; align-items: flex-start; gap: 1rem;
-  border-radius: 14px;
-  background: rgba(201,168,76,0.05);
-  border: 1px solid rgba(201,168,76,0.1);
+  padding: 1.4rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+
   transition: all 0.3s ease;
-  cursor: default;
+  height: 100%;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
 }
+
 .why-card:hover {
-  background: rgba(201,168,76,0.12);
-  border-color: rgba(201,168,76,0.35);
-  transform: translateX(6px);
+  transform: translateY(-5px);
+  border-color: #218ccb;
+  box-shadow: 0 15px 35px rgba(33,140,203,0.12);
 }
+
+/* Icons */
 .why-icon {
-  width: 46px; height: 46px; min-width: 46px;
-  border-radius: 12px;
-  background: var(--gradient-gold);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; color: var(--primary);
-  box-shadow: 0 4px 15px rgba(201,168,76,0.3);
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+
+  border-radius: 14px;
+
+  background: rgba(33,140,203,0.08);
+  border: 2px solid rgba(33,140,203,0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #218ccb;
+  font-size: 1.2rem;
+
+  transition: all 0.3s ease;
 }
-.why-card h6 { font-weight: 700; margin-bottom: 0.2rem; font-size: 0.95rem; }
-.why-card p { font-size: 0.82rem; color: var(--text-muted); margin: 0; line-height: 1.5; }
+
+.why-card:hover .why-icon {
+  background: #218ccb;
+  color: #ffffff;
+  border-color: transparent;
+  transform: scale(1.08);
+}
+
+/* Card Content */
+.why-card h6 {
+  color: #111827;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.why-card p {
+  color: #6b7280;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  #about {
+    padding: 5rem 0;
+  }
+
+  .about-img-wrap img {
+    height: 350px;
+  }
+
+  .about-exp-badge {
+    width: 110px;
+    height: 110px;
+    right: -10px;
+    bottom: -10px;
+  }
+
+  .about-exp-badge .num {
+    font-size: 2rem;
+  }
+
+  .about-exp-badge .lbl {
+    font-size: 0.55rem;
+  }
+
+  .why-card {
+    padding: 1rem;
+  }
+}
 
 /* =============================
    SERVICES SECTION PREMIUM
