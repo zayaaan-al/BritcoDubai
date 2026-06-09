@@ -1721,6 +1721,25 @@ footer::before {
   margin-bottom: 1.5rem;
 }
 
+.footer-logo-only {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .footer-logo-only {
+    height: 60px;
+    margin: 0 auto 1rem;
+  }
+
+  .footer-brand {
+    text-align: center;
+  }
+}
+
 .footer-brand p {
   font-size: 0.9rem;
   color: #94a3b8;

@@ -5,15 +5,17 @@
       {{-- Brand Column --}}
       <div class="col-lg-4 col-md-6">
         <div class="footer-brand">
-          <div style="font-size:1.8rem; font-weight:900; margin-bottom:0.4rem;">
-            <span style="color:#218ccb">BRIT</span>CO
-            <span style="font-size:0.9rem; color:var(--text-muted); font-weight:400; margin-left:4px;">DUBAI</span>
-          </div>
-          <p>
-            UAE's leading Mobile Repair Training Institute and Technician Supply Company.
-            Shaping the future of mobile technology professionals since 2000.
-          </p>
-        </div>
+
+  <img src="{{ asset('images/logo-1.png') }}"
+       alt="Britco Dubai Logo"
+       class="footer-logo-only">
+
+  <p>
+    UAE's leading Mobile Repair Training Institute and Technician Supply Company.
+    Shaping the future of mobile technology professionals since 2000.
+  </p>
+
+</div>
         <div class="footer-social">
           <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
