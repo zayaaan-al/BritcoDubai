@@ -36,6 +36,7 @@
   --shadow-dark: 0 20px 60px rgba(0,0,0,0.5);
 }
 
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
@@ -50,7 +51,7 @@ body {
    SCROLLBAR
 ============================= */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--primary); }
+::-webkit-scrollbar-track { background: #ffffff; }
 ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
 
 /* =============================
@@ -243,6 +244,7 @@ body {
     rgba(10,22,40,0.85) 40%,
     rgba(13,32,64,0.6) 100%);
 }
+
 .hero-particles { position: absolute; inset: 0; overflow: hidden; z-index: 1; }
 .particle {
   position: absolute;
@@ -415,53 +417,107 @@ body {
 /* =============================
    SERVICES SECTION
 ============================= */
-#services { padding: 7rem 0; background: var(--primary); }
+#services {
+  padding: 7rem 0;
+  background: #ffffff;
+}
+
 .service-card {
   padding: 2rem 1.5rem;
   border-radius: 20px;
-  background: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
   text-align: center;
   transition: all 0.4s ease;
   height: 100%;
   position: relative;
   overflow: hidden;
 }
+
+.service-card h5 {
+  color: #111827;
+}
+
+.service-card p {
+  color: #6b7280;
+}
+#services .gradient-text {
+  background: none;
+  -webkit-text-fill-color: #111827;
+  color: #111827;
+}
+
 .service-card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
   background: var(--gradient-gold);
   transform: scaleX(0);
   transition: transform 0.4s ease;
   transform-origin: left;
 }
-.service-card:hover::before { transform: scaleX(1); }
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: var(--shadow-gold);
-  border-color: rgba(201,168,76,0.4);
+  box-shadow: 0 15px 40px rgba(33, 140, 203, 0.15);
+  border-color: var(--accent);
 }
+
 .service-icon {
-  width: 70px; height: 70px;
+  width: 70px;
+  height: 70px;
   margin: 0 auto 1.2rem;
-  background: rgba(201,168,76,0.1);
-  border: 2px solid rgba(201,168,76,0.25);
+  background: rgba(33, 140, 203, 0.1);
+  border: 2px solid rgba(33, 140, 203, 0.2);
   border-radius: 20px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.8rem; color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: var(--accent);
   transition: all 0.3s ease;
 }
+
 .service-card:hover .service-icon {
   background: var(--gradient-gold);
-  color: var(--primary);
+  color: #ffffff;
   border-color: transparent;
   transform: scale(1.1) rotate(5deg);
 }
-.service-card h5 { font-weight: 700; margin-bottom: 0.5rem; font-size: 1rem; }
-.service-card p { font-size: 0.83rem; color: var(--text-muted); line-height: 1.6; }
+
+.service-card h5 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #111827;
+}
+
+.service-card p {
+  font-size: 0.83rem;
+  color: #111827 ;
+  line-height: 1.6;
+}
+/* Service Section Heading Colors */
+
+#services .section-title {
+    color: #111827 !important; /* Mobile Repair = Black */
+}
+
+#services .section-title .gradient-text {
+    background: none !important;
+    -webkit-text-fill-color: #218ccb !important;
+    color: #218ccb !important; /* Services = Blue */
+}
+#services .section-subtitle {
+  color: #111827 ;
+}
 
 /* =============================
    COURSES SECTION
