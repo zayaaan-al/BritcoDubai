@@ -31,9 +31,9 @@
             All our technicians undergo rigorous training, background verification, and skills assessment
             before placement. We ensure your business gets the right talent — immediately ready to contribute.
           </p>
-          <a href="#contact" class="btn-gold">
-            <i class="fas fa-handshake"></i> Request a Technician
-          </a>
+          <a href="#contact" class="btn-technician">
+  <i class="fas fa-handshake"></i> Request a Technician
+</a>
         </div>
       </div>
 
