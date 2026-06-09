@@ -6,7 +6,7 @@
       <div class="col-lg-4 col-md-6">
         <div class="footer-brand">
           <div style="font-size:1.8rem; font-weight:900; margin-bottom:0.4rem;">
-            <span style="color:var(--accent)">BRIT</span>CO
+            <span style="color:#218ccb">BRIT</span>CO
             <span style="font-size:0.9rem; color:var(--text-muted); font-weight:400; margin-left:4px;">DUBAI</span>
           </div>
           <p>
@@ -66,7 +66,7 @@
     {{-- Footer Bottom --}}
     <div class="footer-bottom">
       <p>© {{ date('Y') }} <a href="#">Britco Dubai</a>. All rights reserved. | UAE's Premier Mobile Repair Training Institute</p>
-      <p>Designed with <span style="color:var(--accent)">♦</span> for Excellence</p>
+      <!-- <p>Designed with <span style="color:#218ccb">♦</span> for Excellence</p> -->
     </div>
   </div>
 </footer>
