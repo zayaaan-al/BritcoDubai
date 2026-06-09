@@ -1,7 +1,9 @@
 <nav id="navbar" class="navbar navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand" href="#hero">
-      <div class="navbar-brand-text"><span>BRIT</span>CO</div>
+      <div class="navbar-brand-text">
+  <span>BRIT</span>CO
+</div>
       <small>DUBAI</small>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
