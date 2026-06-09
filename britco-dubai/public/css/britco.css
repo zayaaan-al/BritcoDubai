@@ -146,6 +146,7 @@ body {
   border: 1px solid var(--glass-border);
   border-radius: 20px;
   transition: all 0.4s ease;
+  
 }
 .glass-card:hover {
   border-color: rgba(201, 168, 76, 0.5);
@@ -183,7 +184,7 @@ body {
   box-shadow: 0 4px 30px rgba(0,0,0,0.4);
   border-bottom: 1px solid var(--glass-border);
 }
-.navbar-brand-text { font-size: 1.5rem; font-weight: 900; letter-spacing: -0.5px; }
+.navbar-brand-text { color: white; font-size: 1.5rem; font-weight: 900; letter-spacing: -0.5px; }
 .navbar-brand-text span { color: var(--accent); }
 .navbar-brand small {
   font-size: 0.6rem;
@@ -218,7 +219,7 @@ body {
 .nav-link:hover { color: var(--accent) !important; }
 .navbar-toggler { border-color: var(--accent); padding: 6px 10px; }
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(33,140,203,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* =============================
@@ -313,6 +314,7 @@ body {
   border: 1px solid rgba(201,168,76,0.2);
   border-radius: 16px;
   transition: all 0.3s;
+  
 }
 .stat-item:hover {
   background: rgba(201,168,76,0.15);
@@ -322,12 +324,13 @@ body {
 .stat-number {
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-weight: 900;
-  background: var(--gradient-gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
   display: block;
   line-height: 1;
+
+  /* Remove gradient text */
+  background: none;
+  -webkit-text-fill-color: #ffffff;
 }
 .stat-label { font-size: 0.75rem; color: var(--text-muted); font-weight: 500; margin-top: 0.3rem; letter-spacing: 0.5px; }
 .hero-image-side { position: relative; z-index: 2; }
@@ -354,10 +357,10 @@ body {
 }
 .hero-img-badge-icon {
   width: 44px; height: 44px;
-  background: var(--gradient-gold);
+  background:#c9a84c;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; color: var(--primary);
+  font-size: 1.1rem; color: var(--primary); font-weight: 800;
 }
 .floating-ring {
   position: absolute;
