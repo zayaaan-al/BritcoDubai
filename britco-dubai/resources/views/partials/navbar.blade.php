@@ -1,11 +1,10 @@
 <nav id="navbar" class="navbar navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand" href="#hero">
-      <div class="navbar-brand-text">
-  <span>BRIT</span>CO
-</div>
-      <small>DUBAI</small>
-    </a>
+    <img src="{{ asset('images/logo-1.png') }}"
+         alt="Britco Dubai"
+         class="navbar-logo">
+</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
       aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
